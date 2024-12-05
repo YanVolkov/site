@@ -13,7 +13,7 @@
                 <a href="index.html" class="logo">Yan Volkov</a>
                 <nav id="nav"><a href="index.html">Главная</a>
                     <a href="development.html">Разработчик</a>
-                    <!-- <a href="guest-book.php">Гостевая книга</a> -->
+                    <a href="guest-book.php">Гостевая книга</a>
                     <a href="tests.html">Тесты</a>
                 </nav></div>
         </header>
@@ -28,10 +28,9 @@
                     <div class="modal" id="authModal">
                         <div class="modal-content">
                             <span class="Modalclose" id="closeModal">&times;</span>
-                            <h1></h1>
                             <form id="webDevTest">
                                 <div class="question">
-                                    <h3>1. Какой тег HTML используется для создания гиперссылок?</h3>
+                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">1. Какой тег HTML используется для создания гиперссылок?</h3>
                                     <label><input type="radio" name="q1" value="a"> a) &lt;link&gt;</label><br>
                                     <label><input type="radio" name="q1" value="b"> b) &lt;a&gt;</label><br>
                                     <label><input type="radio" name="q1" value="c"> c) &lt;href&gt;</label><br>
@@ -39,7 +38,7 @@
                                 </div>
             
                                 <div class="question">
-                                    <h3>2. Какой из следующих методов HTTP является безопасным?</h3>
+                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">2. Какой из следующих методов HTTP является безопасным?</h3>
                                     <label><input type="radio" name="q2" value="a"> a) GET</label><br>
                                     <label><input type="radio" name="q2" value="b"> b) POST</label><br>
                                     <label><input type="radio" name="q2" value="c"> c) PUT</label><br>
@@ -47,7 +46,7 @@
                                 </div>
             
                                 <div class="question">
-                                    <h3>3. Какой CSS-селектор используется для выбора всех элементов с классом "example"?</h3>
+                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">3. Какой CSS-селектор используется для выбора всех элементов с классом "example"?</h3>
                                     <label><input type="radio" name="q3" value="a"> a) #example</label><br>
                                     <label><input type="radio" name="q3" value="b"> b) .example</label><br>
                                     <label><input type="radio" name="q3" value="c"> c) example</label><br>
@@ -55,7 +54,7 @@
                                 </div>
             
                                 <div class="question">
-                                    <h3>4. Какой атрибут используется для указания URL в теге &lt;a&gt;?</h3>
+                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">4. Какой атрибут используется для указания URL в теге &lt;a&gt;?</h3>
                                     <label><input type="radio" name="q4" value="a"> a) src</label><br>
                                     <label><input type="radio" name="q4" value="b"> b) href</label><br>
                                     <label><input type="radio" name="q4" value="c"> c) link</label><br>
@@ -63,7 +62,7 @@
                                 </div>
             
                                 <div class="question">
-                                    <h3>5. Какой из следующих языков используется для создания стилей веб-страниц?</h3>
+                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">5. Какой из следующих языков используется для создания стилей веб-страниц?</h3>
                                     <label><input type="radio" name="q5" value="a"> a) HTML</label><br>
                                     <label><input type="radio" name="q5" value="b"> b) CSS</label><br>
                                     <label><input type="radio" name="q5" value="c"> c) JavaScript</label><br>
@@ -88,7 +87,7 @@
                         </div>
                         
                         <div class="image fit">
-                            <!-- <img src="images/pic01.jpg" alt="" width="473" height="220"></div> -->
+                            <!-- <img src=" " alt="" width="473" height="220"></div> -->
                             <p tyle="text-align: justify;">Этот тест включает в себя вопросы по основам HTML, CSS и JavaScript, которые помогут вам оценить свои знания и навыки в создании веб-сайтов. Ответьте на вопросы и узнайте, насколько хорошо вы понимаете принципы веб-разработки. Готовы к вызову? Начните тест прямо сейчас!</p>
                             <button type="submit" class="block-test">Начать тест</button>
                         </div>
@@ -100,7 +99,7 @@
                                 <h3></h3>
                             </header>
                             <div class="image fit">
-                                <!-- <img src="images/pic02.jpg" alt="" width="473" height="220"></div> -->
+                                <!-- <img src=" " alt="" width="473" height="220"></div> -->
                                 <p></p>
                             </div>
                         </div>
@@ -108,107 +107,167 @@
                 </div>
             </section>
     
-        <script>
+            <script>
                 document.getElementById('webDevTest').addEventListener('submit', function(event) {
                     event.preventDefault(); // предотвращаем отправку формы
-    
+        
                     let score = 0;
                     const answers = {
-                        q1: 'b', 
-                        q2: 'b',
-                        q3: 'b', 
-                        q4: 'b', 
-                        q5: 'b'  
+                        q1: { correct: 'b', text: 'b) <a>' },
+                        q2: { correct: 'b', text: 'b) POST' },
+                        q3: { correct: 'b', text: 'b) .example' },
+                        q4: { correct: 'b', text: 'b) href' },
+                        q5: { correct: 'b', text: 'b) CSS' }
                     };
-    
+        
                     // Проверяем ответы
+                    let resultHtml = ''; // Хранение результатов
                     for (const question in answers) {
                         const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
-                        if (selectedAnswer && selectedAnswer.value === answers[question]) {
-                            score++;
+                        const correctAnswer = answers[question].correct;
+                        const correctText = answers[question].text;
+        
+                        if (selectedAnswer) {
+                            const label = selectedAnswer.labels[0];
+                            if (selectedAnswer.value === correctAnswer) {
+                                score++;
+                                label.parentNode.classList.add("correct");
+                                resultHtml += `<p class="correct" style="padding-left: 5px;>${correctText} - Правильно!</p>`;
+                            } else {
+                                label.parentNode.classList.add("incorrect");
+                                resultHtml += `<p class="incorrect" style="padding-left: 5px;>${label.innerText} - Неправильно! Правильный ответ: ${correctText}</p>`;
+                            }
+                        } 
+                        else {
+                            resultHtml += `<p class="incorrect" style="padding-left: 5px;">Не выбрано - Правильный ответ: ${correctText}</p>`;
                         }
                     }
-    
+        
                     // Выводим результат
-                    document.getElementById('result').innerText = `Вы набрали ${score} из ${Object.keys(answers).length} правильных ответов.`;
+                    document.getElementById('result').innerHTML = `
+                        
+                            <p style="margin-bottom: 0px;">Вы набрали ${score} из ${Object.keys(answers).length} правильных ответов.</p>
+                            <div>${resultHtml}</div>
+                        
+                    `;
                 });
-            </script>
-    
-            <script>
+        
                 // Получаем элементы
-                const blocks = document.querySelectorAll('.block-test');
+                const startTestButton = document.querySelector('.block-test');
                 const authModal = document.getElementById('authModal');
                 const closeModalButton = document.getElementById('closeModal');
-    
-                // Обработчик клика на блоки
-                blocks.forEach(block => {
-                    block.addEventListener('click', function() {
-                        authModal.style.display = 'block'; // Показываем модальное окно
-                    });
+        
+                // Обработчик клика на кнопку "Начать тест"
+                startTestButton.addEventListener('click', function() {
+                    authModal.style.display = 'block';
                 });
-    
+        
                 // Закрытие модального окна при нажатии на кнопку закрытия
                 closeModalButton.addEventListener('click', function() {
-                    authModal.style.display = 'none'; // Скрываем модальное окно
+                    authModal.style.display = 'none';
                 });
             </script>
     
             <style>
-            .question {
-                margin-bottom: 20px;
-            }
-    
-            button {
-                background-color: black;
-                color: white; 
-                padding: 10px 20px;
-                border: none; 
-                border-radius: 5px;
-                cursor: pointer;
-                width: 200px;
-            }
-    
-            button:hover {
-                background-color: #3c3d3d;
-            }
-    
-            .modal {
-                display: none; 
-                position: fixed; 
-                z-index: 1000; 
-                left: 0;
-                top: 0;
-                width: 100%;
-                height: 100%; 
-                overflow: auto;
-                background-color: rgba(0, 0, 0, 0.5);
-                
-            }
-    
-            .modal-content {
-                background-color: white; 
-                margin: 15% auto;
-                padding: 20px;
-                border: 1px solid #888; 
-                width: 80%; 
-                max-width: 600px;
-                margin-bottom: 0;
-                margin-top: 150px;
-            }
-    
-            .Modalclose {
-                color: #aaa;
-                float: right;
-                font-size: 30px; 
-                font-weight: bold; 
-            }
-    
-            .Modalclose:hover,
-            .Modalclose:focus {
-                color: black;
-                text-decoration: none;
-                cursor: pointer;
-            }
+                .question {
+                    margin-bottom: 15px;
+                    border-radius: 5px;
+                    background: #f9f9f9;
+                    border: 2px solid rgb(173, 173, 173);
+                }
+
+                label {
+                    margin: 5px 0;
+                    padding: 8px;
+                    border-radius: 5px;
+                    transition: background 0.3s;
+                    cursor: pointer;
+                }
+
+                label:hover {
+                    background: #e8f5e9;
+                }
+
+                button {
+                    background-color: #4CAF50;
+                    color: white; 
+                    padding: 12px 20px;
+                    border: none; 
+                    border-radius: 5px;
+                    cursor: pointer;
+                    width: 100%;
+                    font-size: 18px;
+                    transition: background 0.3s;
+                }
+
+                button:hover {
+                    background-color: #388E3C;
+                }
+
+                .result {
+                    margin-top: 20px;
+                    padding: 15px;
+                    background: #e8f5e9;
+                    border-left: 5px solid #4CAF50;
+                    border-radius: 5px;
+                }
+
+                .modal {
+                    display: none; 
+                    position: fixed; 
+                    z-index: 1000; 
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%; 
+                    overflow: auto;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                .modal-content {
+                    background-color: white; 
+                    margin: 15% auto;
+                    padding: 20px;
+                    border: 4px solid #888; 
+                    width: 80%; 
+                    max-width: 600px;
+                    border-radius: 10px;
+                    margin-top: 150px;
+                }
+
+                .Modalclose {
+                    color: #aaa;
+                    float: right;
+                    font-size: 25px; 
+                    font-weight: bold;
+                    margin-top: -33px;
+                    margin-right: -15px;
+                }
+
+                .Modalclose:hover,
+                .Modalclose:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+                .correct {
+                    background-color: #c8e6c9;
+                    color: #4CAF50;
+                }
+
+                .incorrect {
+                    background-color: #ffcdd2;
+                    color: #c62828;
+                }
+
+                .question.incorrect{
+                    border: 2px solid #c62828;
+                }
+
+                .question.correct{
+                    border: 2px solid #4CAF50;
+                }
             </style>
 
     <!-- Scripts -->
