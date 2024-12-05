@@ -37,7 +37,7 @@ if($_POST['submit']){
                 <a href="index.html" class="logo">Yan Volkov</a>
                 <nav id="nav"><a href="index.html">Главная</a>
                     <a href="development.html">Разработчик</a>
-                    <a href="guest-book.php">Гостевая книга</a>
+                    <!-- Banner <a href="guest-book.php">Гостевая книга</a> -->
                     <a href="tests.html">Тесты</a>
                 </nav>
             </div>
