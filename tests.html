@@ -13,7 +13,7 @@
                 <a href="index.html" class="logo">Yan Volkov</a>
                 <nav id="nav"><a href="index.html">Главная</a>
                     <a href="development.html">Разработчик</a>
-                    <a href=" ">Гостевая книга</a>
+                    <a href="guest-book.php">Гостевая книга</a>
                     <a href="tests.html">Тесты</a>
                 </nav></div>
         </header>
@@ -24,251 +24,386 @@
                     <h1>Тесты на прохождение</h1>
                     <h4></h4>
                 </header>
-                <main>
-                    <div class="modal" id="authModal">
-                        <div class="modal-content">
-                            <span class="Modalclose" id="closeModal">&times;</span>
-                            <form id="webDevTest">
-                                <div class="question">
-                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">1. Какой тег HTML используется для создания гиперссылок?</h3>
-                                    <label><input type="radio" name="q1" value="a"> a) &lt;link&gt;</label><br>
-                                    <label><input type="radio" name="q1" value="b"> b) &lt;a&gt;</label><br>
-                                    <label><input type="radio" name="q1" value="c"> c) &lt;href&gt;</label><br>
-                                    <label><input type="radio" name="q1" value="d"> d) &lt;url&gt;</label>
-                                </div>
-            
-                                <div class="question">
-                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">2. Какой из следующих методов HTTP является безопасным?</h3>
-                                    <label><input type="radio" name="q2" value="a"> a) GET</label><br>
-                                    <label><input type="radio" name="q2" value="b"> b) POST</label><br>
-                                    <label><input type="radio" name="q2" value="c"> c) PUT</label><br>
-                                    <label><input type="radio" name="q2" value="d"> d) DELETE</label>
-                                </div>
-            
-                                <div class="question">
-                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">3. Какой CSS-селектор используется для выбора всех элементов с классом "example"?</h3>
-                                    <label><input type="radio" name="q3" value="a"> a) #example</label><br>
-                                    <label><input type="radio" name="q3" value="b"> b) .example</label><br>
-                                    <label><input type="radio" name="q3" value="c"> c) example</label><br>
-                                    <label><input type="radio" name="q3" value="d"> d) *example</label>
-                                </div>
-            
-                                <div class="question">
-                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">4. Какой атрибут используется для указания URL в теге &lt;a&gt;?</h3>
-                                    <label><input type="radio" name="q4" value="a"> a) src</label><br>
-                                    <label><input type="radio" name="q4" value="b"> b) href</label><br>
-                                    <label><input type="radio" name="q4" value="c"> c) link</label><br>
-                                    <label><input type="radio" name="q4" value="d"> d) url</label>
-                                </div>
-            
-                                <div class="question">
-                                    <h3 style="padding-left: 10px; padding-top: 10px; font-size: 22px;">5. Какой из следующих языков используется для создания стилей веб-страниц?</h3>
-                                    <label><input type="radio" name="q5" value="a"> a) HTML</label><br>
-                                    <label><input type="radio" name="q5" value="b"> b) CSS</label><br>
-                                    <label><input type="radio" name="q5" value="c"> c) JavaScript</label><br>
-                                    <label><input type="radio" name="q5" value="d"> d) PHP</label>
-                                </div>
-            
-                                <button type="submit">Отправить</button>
-                            </form>
-                        <div class="result" id="result"></div>
+                
+    <!-- Two -->
+        <section id="two">
+            <div class="inner">
+                <article>
+                    <div class="content">
+                        <header>
+                           <h3>Тест по веб-разработке</h3>
+                        </header>
                     </div>
                     
-                </main>
+                    <div class="image fit">
+                        <p style="text-align: justify;">Этот тест включает в себя вопросы по основам HTML, CSS и JavaScript, которые помогут вам оценить свои знания и навыки в создании веб-сайтов. Ответьте на вопросы и узнайте, насколько хорошо вы понимаете принципы веб-разработки. Готовы к вызову? Начните тест прямо сейчас!</p>
+                        <button type="submit" class="block-test">Начать тест</button>
+                    </div>
+                </article>
 
-        <!-- Two -->
-            <section id="two">
-                <div class="inner">
-                    <article>
-                        <div class="content">
-                            <header>
-                                <h3>Тест по веб-разработке</h3>
-                            </header>
-                        </div>
-                        
-                        <div class="image fit">
-                            <!-- <img src=" " alt="" width="473" height="220"></div> -->
-                            <p tyle="text-align: justify;">Этот тест включает в себя вопросы по основам HTML, CSS и JavaScript, которые помогут вам оценить свои знания и навыки в создании веб-сайтов. Ответьте на вопросы и узнайте, насколько хорошо вы понимаете принципы веб-разработки. Готовы к вызову? Начните тест прямо сейчас!</p>
-                            <button type="submit" class="block-test">Начать тест</button>
-                        </div>
-                    </article>
+                <article class="alt">
+                    <div class="content">
+                        <header>
+                            <h3>Тест для системного администратора</h3>
+                        </header>
+                    </div>
 
-                    <article class="alt">
-                        <div class="content">
-                            <header>
-                                <h3></h3>
-                            </header>
-                            <div class="image fit">
-                                <!-- <img src=" " alt="" width="473" height="220"></div> -->
-                                <p></p>
-                            </div>
+                    <div class="image fit">
+                        <p>Этот тест включает вопросы по различным аспектам администрирования, включая операционные системы, сети, безопасность и резервное копирование. Тест состоит из 10 вопросов с несколькими вариантами ответов. Готовы к вызову? Начните тест прямо сейчас!</p>
+                        <button type="submit2" class="block-test">Начать тест</button>
+                    </div>        
+                </article>
+            </div>
+        </section>
+
+        <main>
+            <div class="modal" id="authModal">
+                <div class="modal-content">
+                    <span class="Modalclose" id="closeModal">&times;</span>
+                    <form id="webDevTest">
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">1. Какой тег HTML используется для создания гиперссылок?</h3>
+                            <label><input type="radio" name="q1" value="a"> a) &lt;link&gt; </span></label><br>
+                            <label><input type="radio" name="q1" value="b"> b) &lt;a&gt;</label><br>
+                            <label><input type="radio" name="q1" value="c"> c) &lt;href&gt;</label><br>
+                            <label><input type="radio" name="q1" value="d" style="margin-bottom: 12px;"> d) &lt;url&gt;</label>
                         </div>
-                    </article>
-                </div>
-            </section>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">2. Какой из следующих методов HTTP является безопасным?</h3>
+                            <label><input type="radio" name="q2" value="a"> a) GET</label><br>
+                            <label><input type="radio" name="q2" value="b"> b) PUT</label><br>
+                            <label><input type="radio" name="q2" value="c"> c) POST</label><br>
+                            <label><input type="radio" name="q2" value="d" style="margin-bottom: 12px;"> d) DELETE</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">3. Какой CSS-селектор используется для выбора всех элементов с классом "example"?</h3>
+                            <label><input type="radio" name="q3" value="a"> a) *example</label><br>   
+                            <label><input type="radio" name="q3" value="b"> b) #example</label><br>
+                            <label><input type="radio" name="q3" value="c"> c) example</label><br>
+                            <label><input type="radio" name="q3" value="d" style="margin-bottom: 12px;"> d) .example</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">4. Какой атрибут используется для указания URL в теге &lt;a&gt;?</h3>
+                            <label><input type="radio" name="q4" value="a"> a) src</label><br>
+                            <label><input type="radio" name="q4" value="b"> b) href</label><br>
+                            <label><input type="radio" name="q4" value="c"> c) link</label><br>
+                            <label><input type="radio" name="q4" value="d" style="margin-bottom: 12px;"> d) url</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">5. Какой из следующих языков используется для создания стилей веб-страниц?</h3>
+                            <label><input type="radio" name="q5" value="a"> a) HTML</label><br>
+                            <label><input type="radio" name="q5" value="b"> b) JavaScript</label><br>
+                            <label><input type="radio" name="q5" value="c"> c) CSS</label><br>
+                            <label><input type="radio" name="q5" value="d" style="margin-bottom: 12px;"> d) PHP</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">6. Какой тег используется для вставки изображений в HTML?</h3>
+                            <label><input type="radio" name="q6" value="a"> a) &lt;image&gt;</label><br>
+                            <label><input type="radio" name="q6" value="b"> b) &lt;img&gt;</label><br>
+                            <label><input type="radio" name="q6" value="c"> c) &lt;picture&gt;</label><br>
+                            <label><input type="radio" name="q6" value="d" style="margin-bottom: 12px;"> d) &lt;src&gt;</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">7. Какой атрибут используется для указания альтернативного текста для изображений?</h3>
+                            <label><input type="radio" name="q7" value="a"> a) href</label><br>
+                            <label><input type="radio" name="q7" value="b"> b) title</label><br>
+                            <label><input type="radio" name="q7" value="c"> c) src</label><br>
+                            <label><input type="radio" name="q7" value="d" style="margin-bottom: 12px;"> d) alt</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">8. Какой язык программирования используется для создания интерактивных элементов на веб-странице?</h3>
+                            <label><input type="radio" name="q8" value="a"> a) HTML</label><br>
+                            <label><input type="radio" name="q8" value="b"> b) CSS</label><br>
+                            <label><input type="radio" name="q8" value="d"> d) SQL</label><br>
+                            <label><input type="radio" name="q8" value="c" style="margin-bottom: 12px;"> c) JavaScript</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">9. Что такое CSS?</h3>
+                            <label><input type="radio" name="q9" value="a"> a) Язык разметки</label><br>
+                            <label><input type="radio" name="q9" value="b"> b) Язык стилей</label><br>
+                            <label><input type="radio" name="q9" value="c"> c) Язык программирования</label><br>
+                            <label><input type="radio" name="q9" value="d" style="margin-bottom: 12px;"> d) Язык баз данных</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">10. Какой тег используется для создания ненумерованного списка?</h3>
+                            <label><input type="radio" name="q10" value="a"> a) &lt;ul&gt;</label><br>
+                            <label><input type="radio" name="q10" value="b"> b) &lt;ol&gt;</label><br>
+                            <label><input type="radio" name="q10" value="c"> c) &lt;li&gt;</label><br>
+                            <label><input type="radio" name="q10" value="d" style="margin-bottom: 12px;"> d) &lt;list&gt;</label>
+                        </div>
+                    
+                        <button type="submit">Отправить</button>
+                    </form>
+                <div class="result" id="result"></div>
+            </div>
+
+            <div class="modal" id="authModal">
+                <div class="modal-content">
+                    <span class="Modalclose" id="closeModal">&times;</span>
+                    <form id="sysAdminTest">
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">1. Какой протокол используется для передачи файлов по сети?</h3>
+                            <label><input type="radio" name="q1" value="a"> a) HTTP</label><br>
+                            <label><input type="radio" name="q1" value="b"> b) FTP</label><br>
+                            <label><input type="radio" name="q1" value="c"> c) SMTP</label><br>
+                            <label><input type="radio" name="q1" value="d" style="margin-bottom: 12px;"> d) SSH</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">2. Какой инструмент можно использовать для мониторинга производительности системы в Linux?</h3>
+                            <label><input type="radio" name="q2" value="a"> a) Task Manager</label><br>
+                            <label><input type="radio" name="q2" value="b"> b) top</label><br>
+                            <label><input type="radio" name="q2" value="c"> c) Control Panel</label><br>
+                            <label><input type="radio" name="q2" value="d" style="margin-bottom: 12px;"> d) Disk Management</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">3. Какой порт используется по умолчанию для SSH?</h3>
+                            <label><input type="radio" name="q3" value="a"> a) 22</label><br>
+                            <label><input type="radio" name="q3" value="b"> b) 80</label><br>
+                            <label><input type="radio" name="q3" value="c"> c) 443</label><br>
+                            <label><input type="radio" name="q3" value="d" style="margin-bottom: 12px;"> d) 21</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">4. Какой метод является наиболее безопасным для аутентификации пользователей?</h3>
+                            <label><input type="radio" name="q4" value="a"> a) Пароль</label><br>
+                            <label><input type="radio" name="q4" value="b"> b) Двухфакторная аутентификация</label><br>
+                            <label><input type="radio" name="q4" value="c"> c) Ответ на секретный вопрос</label><br>
+                            <label><input type="radio" name="q4" value="d" style="margin-bottom: 12px;"> d) SMS-код</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">5. Что такое RAID?</h3>
+                            <label><input type="radio" name="q5" value="a"> a) Метод резервного копирования</label><br>
+                            <label><input type="radio" name="q5" value="b"> b) Технология повышения надежности и производительности дисковых массивов</label><br>
+                            <label><input type="radio" name="q5" value="c"> c) Протокол передачи данных</label><br>
+                            <label><input type="radio" name="q5" value="d" style="margin-bottom: 12px;"> d) Операционная система</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">6. Какой файл является конфигурационным для сетевых интерфейсов в Linux?</h3>
+                            <label><input type="radio" name="q6" value="a"> a) /etc/passwd</label><br>
+                            <label><input type="radio" name="q6" value="b"> b) /etc/network/interfaces</label><br>
+                            <label><input type="radio" name="q6" value="c"> c) /etc/hosts</label><br>
+                            <label><input type="radio" name="q6" value="d" style="margin-bottom: 12px;"> d) /etc/fstab</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">7. Какой инструмент используется для управления пакетами в Debian?</h3>
+                            <label><input type="radio" name="q7" value="a"> a) yum</label><br>
+                            <label><input type="radio" name="q7" value="b"> b) apt</label><br>
+                            <label><input type="radio" name="q7" value="c"> c) pacman</label><br>
+                            <label><input type="radio" name="q7" value="d" style="margin-bottom: 12px;"> d) zypper</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">8. Какой тип резервного копирования включает полное резервное копирование всех данных?</h3>
+                            <label><input type="radio" name="q8" value="a"> a) Инкрементное</label><br>
+                            <label><input type="radio" name="q8" value="b"> b) Дифференциальное</label><br>
+                            <label><input type="radio" name="q8" value="c"> c) Полное</label><br>
+                            <label><input type="radio" name="q8" value="d" style="margin-bottom: 12px;"> d) Локальное</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">9. Какой тип атаки направлен на перегрузку сервера?</h3>
+                            <label><input type="radio" name="q9" value="a"> a) Фишинг</label><br>
+                            <label><input type="radio" name="q9" value="b"> b) DDoS</label><br>
+                            <label><input type="radio" name="q9" value="c"> c) SQL-инъекция</label><br>
+                            <label><input type="radio" name="q9" value="d" style="margin-bottom: 12px;"> d) Кража паролей</label>
+                        </div>
+                    
+                        <div class="question">
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">10. Какой метод шифрования считается наиболее безопасным?</h3>
+                            <label><input type="radio" name="q10" value="a"> a) DES</label><br>
+                            <label><input type="radio" name="q10" value="b"> b) AES</label><br>
+                            <label><input type="radio" name="q10" value="c"> c) RC4</label><br>
+                            <label><input type="radio" name="q10" value="d" style="margin-bottom: 12px;"> d) 3DES</label>
+                        </div>
+                    
+                        <button type="submit">Отправить</button>
+                    </form>
+                <div class="result" id="result"></div>
+            </div>
+        </main>    
     
-            <script>
-                document.getElementById('webDevTest').addEventListener('submit', function(event) {
-                    event.preventDefault(); // предотвращаем отправку формы
-        
-                    let score = 0;
-                    const answers = {
-                        q1: { correct: 'b', text: 'b) <a>' },
-                        q2: { correct: 'b', text: 'b) POST' },
-                        q3: { correct: 'b', text: 'b) .example' },
-                        q4: { correct: 'b', text: 'b) href' },
-                        q5: { correct: 'b', text: 'b) CSS' }
-                    };
-        
-                    // Проверяем ответы
-                    let resultHtml = ''; // Хранение результатов
-                    for (const question in answers) {
-                        const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
-                        const correctAnswer = answers[question].correct;
-                        const correctText = answers[question].text;
-        
-                        if (selectedAnswer) {
-                            const label = selectedAnswer.labels[0];
-                            if (selectedAnswer.value === correctAnswer) {
-                                score++;
-                                label.parentNode.classList.add("correct");
-                                resultHtml += `<p class="correct" style="padding-left: 5px;>${correctText} - Правильно!</p>`;
-                            } else {
-                                label.parentNode.classList.add("incorrect");
-                                resultHtml += `<p class="incorrect" style="padding-left: 5px;>${label.innerText} - Неправильно! Правильный ответ: ${correctText}</p>`;
-                            }
-                        } 
-                        else {
-                            resultHtml += `<p class="incorrect" style="padding-left: 5px;">Не выбрано - Правильный ответ: ${correctText}</p>`;
+        <script>
+            document.getElementById('webDevTest').addEventListener('submit', function(event) {
+                event.preventDefault(); // предотвращаем отправку формы
+
+                let score = 0;
+                const answers = {
+                    q1: { correct: 'b', text: 'b) <a>' },
+                    q2: { correct: 'c', text: 'c) POST' },
+                    q3: { correct: 'd', text: 'd) .example' },
+                    q4: { correct: 'b', text: 'b) href' },
+                    q5: { correct: 'c', text: 'c) CSS' },
+                    q6: { correct: 'b', text: 'b) <img>' },
+                    q7: { correct: 'd', text: 'd) alt' },
+                    q8: { correct: 'c', text: 'c) JavaScript' },
+                    q9: { correct: 'b', text: 'b) Язык стилей' },
+                    q10: { correct: 'a', text: 'a) <ul>' }
+                };
+
+                // Проверяем ответы
+                let resultHtml = ''; // Хранение результатов
+                for (const question in answers) {
+                    const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                    const correctAnswer = answers[question].correct;
+                    const correctText = answers[question].text;
+
+                    if (selectedAnswer) {
+                        const label = selectedAnswer.labels[0];
+                        if (selectedAnswer.value === correctAnswer) {
+                            score++;
+                            label.parentNode.classList.add("correct");
+                            resultHtml += `<p class="correct" style="padding-left: 5px;">${correctText} - Правильно!</p>`;
+                        } else {
+                            label.parentNode.classList.add("incorrect");
+                            resultHtml += `<p class="incorrect" style="padding-left: 5px;">${label.innerText} - Неправильно! Правильный ответ: ${correctText}</p>`;
                         }
-                    }
-        
-                    // Выводим результат
-                    document.getElementById('result').innerHTML = `
-                        
-                            <p style="margin-bottom: 0px;">Вы набрали ${score} из ${Object.keys(answers).length} правильных ответов.</p>
-                            <div>${resultHtml}</div>
-                        
-                    `;
-                });
-        
-                // Получаем элементы
-                const startTestButton = document.querySelector('.block-test');
-                const authModal = document.getElementById('authModal');
-                const closeModalButton = document.getElementById('closeModal');
-        
-                // Обработчик клика на кнопку "Начать тест"
-                startTestButton.addEventListener('click', function() {
-                    authModal.style.display = 'block';
-                });
-        
-                // Закрытие модального окна при нажатии на кнопку закрытия
-                closeModalButton.addEventListener('click', function() {
-                    authModal.style.display = 'none';
-                });
-            </script>
+                    } else {
+                        resultHtml += `<p class="incorrect" style="padding-left: 5px;">Не выбрано - Правильный ответ: ${correctText}</p>`;
+                    } 
+                }
+
+                // Выводим результат
+                document.getElementById('result').innerHTML = `
+                    <p style="margin-bottom: 0px;">Вы набрали ${score} из ${Object.keys(answers).length} правильных ответов.</p>
+                    <div>${resultHtml}</div>  
+                `;
+            });
     
-            <style>
-                .question {
-                    margin-bottom: 15px;
-                    border-radius: 5px;
-                    background: #f9f9f9;
-                    border: 2px solid rgb(173, 173, 173);
-                }
+            // Получаем элементы
+            const startTestButton = document.querySelector('.block-test');
+            const authModal = document.getElementById('authModal');
+            const closeModalButton = document.getElementById('closeModal');
+    
+            // Обработчик клика на кнопку "Начать тест"
+            startTestButton.addEventListener('click', function() {
+                authModal.style.display = 'block';
+            });
+    
+            // Закрытие модального окна
+            closeModalButton.addEventListener('click', function() {
+                authModal.style.display = 'none';
+            });
+        </script>    
+    
+        <style>
+            .question {
+                margin-bottom: 15px;
+                border-radius: 5px;
+                background: #f9f9f9;
+                border: 2px solid rgb(173, 173, 173);
+            }
 
-                label {
-                    margin: 5px 0;
-                    padding: 8px;
-                    border-radius: 5px;
-                    transition: background 0.3s;
-                    cursor: pointer;
-                }
+            label {
+                margin: 5px 0;
+                padding: 8px;
+                border-radius: 5px;
+                transition: background 0.3s;
+                cursor: pointer;
+                font-weight: normal;
+                
+            }
 
-                label:hover {
-                    background: #e8f5e9;
-                }
+            label:hover {
+                background: #e8f5e9;
+            }
 
-                button {
-                    background-color: #4CAF50;
-                    color: white; 
-                    padding: 12px 20px;
-                    border: none; 
-                    border-radius: 5px;
-                    cursor: pointer;
-                    width: 100%;
-                    font-size: 18px;
-                    transition: background 0.3s;
-                }
+            button {
+                background-color: #4CAF50;
+                color: white; 
+                padding: 12px 20px;
+                border: none; 
+                border-radius: 5px;
+                cursor: pointer;
+                width: 100%;
+                font-size: 18px;
+                transition: background 0.3s;
+            }
 
-                button:hover {
-                    background-color: #388E3C;
-                }
+            button:hover {
+                background-color: #388E3C;
+            }
 
-                .result {
-                    margin-top: 20px;
-                    padding: 15px;
-                    background: #e8f5e9;
-                    border-left: 5px solid #4CAF50;
-                    border-radius: 5px;
-                }
+            .result {
+                margin-top: 20px;
+                padding: 15px;
+                background: #e8f5e9;
+                border-left: 5px solid #4CAF50;
+                border-radius: 5px;
+            }
 
-                .modal {
-                    display: none; 
-                    position: fixed; 
-                    z-index: 1000; 
-                    left: 0;
-                    top: 0;
-                    width: 100%;
-                    height: 100%; 
-                    overflow: auto;
-                    background-color: rgba(0, 0, 0, 0.5);
-                }
+            .modal {
+                display: none; 
+                position: fixed; 
+                z-index: 1000; 
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%; 
+                overflow: auto;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
 
-                .modal-content {
-                    background-color: white; 
-                    margin: 15% auto;
-                    padding: 20px;
-                    border: 4px solid #888; 
-                    width: 80%; 
-                    max-width: 600px;
-                    border-radius: 10px;
-                    margin-top: 150px;
-                }
+            .modal-content {
+                background-color: white; 
+                margin: 15% auto;
+                padding: 20px;
+                border: 4px solid #888; 
+                width: 80%; 
+                max-width: 600px;
+                border-radius: 10px;
+                margin-top: 150px;
+            }
 
-                .Modalclose {
-                    color: #aaa;
-                    float: right;
-                    font-size: 25px; 
-                    font-weight: bold;
-                    margin-top: -33px;
-                    margin-right: -15px;
-                }
+            .Modalclose {
+                color: #aaa;
+                float: right;
+                font-size: 25px; 
+                font-weight: bold;
+                margin-top: -33px;
+                margin-right: -15px;
+            }
 
-                .Modalclose:hover,
-                .Modalclose:focus {
-                    color: black;
-                    text-decoration: none;
-                    cursor: pointer;
-                }
+            .Modalclose:hover,
+            .Modalclose:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
 
-                .correct {
-                    background-color: #c8e6c9;
-                    color: #4CAF50;
-                }
+            .correct {
+                background-color: #c8e6c9;
+                color: #4CAF50;
+                border-radius: 5px;
+            }
 
-                .incorrect {
-                    background-color: #ffcdd2;
-                    color: #c62828;
-                }
+            .incorrect {
+                background-color: #ffcdd2;
+                color: #c62828;
+                border-radius: 5px;
+            }
 
-                .question.incorrect{
-                    border: 2px solid #c62828;
-                }
+            .question.incorrect{
+                border: 2px solid #c62828;
+            }
 
-                .question.correct{
-                    border: 2px solid #4CAF50;
-                }
-            </style>
+            .question.correct{
+                border: 2px solid #4CAF50;
+            }
+        </style>    
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script><script src="assets/js/skel.min.js"></script><script src="assets/js/util.js"></script><script src="assets/js/main.js"></script>
