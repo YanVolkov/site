@@ -13,7 +13,7 @@
                 <a href="index.html" class="logo">Yan Volkov</a>
                 <nav id="nav"><a href="index.html">Главная</a>
                     <a href="development.html">Разработчик</a>
-                    <a href=" ">Гостевая книга</a>
+                    <a href="guest-book.php">Гостевая книга</a>
                     <a href="tests.html">Тесты</a>
                 </nav></div>
         </header>
@@ -50,7 +50,7 @@
 
                     <div class="image fit">
                         <p>Этот тест включает вопросы по различным аспектам администрирования, включая операционные системы, сети, безопасность и резервное копирование. Тест состоит из 10 вопросов с несколькими вариантами ответов. Готовы к вызову? Начните тест прямо сейчас!</p>
-                        <button type="submit2" class="block-test">Начать тест</button>
+                        <button type="button" class="block-test2">Начать тест</button>
                     </div>        
                 </article>
             </div>
@@ -143,12 +143,22 @@
                     
                         <button type="submit">Отправить</button>
                     </form>
-                <div class="result" id="result"></div>
+                    <div class="result" id="result"></div>
+                    <!-- Модальное окно для подтверждения -->
+                    <div id="confirmModal2" class="modal">
+                        <div class="modal-content">
+                            <span id="closeConfirmModal2" style="cursor:pointer; color: #aaa; font-size: 25px; font-weight: bold;">&times;</span>
+                            <p style="margin-bottom: 20px;">Подтвердите действие: все несохраненные данные будут потеряны.</p>
+                            <button id="confirmCloseButton2" style="margin-bottom: 10px;">Подтвердить</button>
+                            <button id="cancelCloseButton2">Отмена</button>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="modal" id="authModal">
+            <div class="modal" id="authModal2">
                 <div class="modal-content">
-                    <span class="Modalclose" id="closeModal">&times;</span>
+                    <span class="Modalclose" id="closeModal2">&times;</span>
                     <form id="sysAdminTest">
                         <div class="question">
                             <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">1. Какой протокол используется для передачи файлов по сети?</h3>
@@ -232,7 +242,17 @@
                     
                         <button type="submit">Отправить</button>
                     </form>
-                <div class="result" id="result"></div>
+                    <div class="result2" id="result2"></div>
+                    <!-- Модальное окно для подтверждения -->
+                    <div id="confirmModal" class="modal">
+                        <div class="modal-content">
+                            <span id="closeConfirmModal" style="cursor:pointer; color: #aaa; font-size: 25px; font-weight: bold;">&times;</span>
+                            <p style="margin-bottom: 20px;">Подтвердите действие: все несохраненные данные будут потеряны.</p>
+                            <button id="confirmCloseButton" style="margin-bottom: 10px;">Подтвердить</button>
+                            <button id="cancelCloseButton">Отмена</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>    
     
@@ -287,17 +307,134 @@
             const startTestButton = document.querySelector('.block-test');
             const authModal = document.getElementById('authModal');
             const closeModalButton = document.getElementById('closeModal');
-    
+            const confirmModal2 = document.getElementById('confirmModal2');
+            const closeConfirmModal2 = document.getElementById('closeConfirmModal2');
+            const confirmCloseButton2 = document.getElementById('confirmCloseButton2');
+            const cancelCloseButton2 = document.getElementById('cancelCloseButton2');
+
             // Обработчик клика на кнопку "Начать тест"
             startTestButton.addEventListener('click', function() {
                 authModal.style.display = 'block';
             });
-    
-            // Закрытие модального окна
+
+            // Открытие модального окна подтверждения
             closeModalButton.addEventListener('click', function() {
-                authModal.style.display = 'none';
+                confirmModal2.style.display = 'block';
             });
-        </script>    
+
+            // Подтверждение закрытия
+            confirmCloseButton2.addEventListener('click', function() {
+                authModal.style.display = 'none';
+                resetForm(); // Сбрасываем форму при закрытии модального окна
+                confirmModal2.style.display = 'none';
+            });
+
+            // Отмена закрытия
+            cancelCloseButton.addEventListener('click', function() {
+                confirmModal2.style.display = 'none'; 
+            });
+
+            // Закрытие модального окна подтверждения при нажатии на крестик
+            closeConfirmModal2.addEventListener('click', function() {
+                confirmModal2.style.display = 'none';
+            });
+
+            // Функция для сброса формы
+            function resetForm() {
+                document.getElementById('sysAdminTest').reset(); // Сброс формы
+                document.getElementById('result2').innerHTML = ''; // Очистка результатов
+            }
+        </script>  
+        
+        <script>
+            document.getElementById('sysAdminTest').addEventListener('submit', function(event) {
+            event.preventDefault(); // предотвращаем отправку формы
+
+            let score = 0;
+            const answers = {
+                q1: { correct: 'b', text: 'b) FTP' },
+                q2: { correct: 'b', text: 'b) top' },
+                q3: { correct: 'a', text: 'a) 22' },
+                q4: { correct: 'b', text: 'b) Двухфакторная аутентификация' },
+                q5: { correct: 'b', text: 'b) Технология повышения надежности и производительности дисковых массивов' },
+                q6: { correct: 'b', text: 'b) /etc/network/interfaces' },
+                q7: { correct: 'b', text: 'b) apt' },
+                q8: { correct: 'c', text: 'c) Полное' },
+                q9: { correct: 'b', text: 'b) DDoS' },
+                q10: { correct: 'b', text: 'b) AES' }
+            };
+
+            // Проверяем ответы
+            let resultHtml2 = '';
+            for (const question in answers) {
+                const selectedAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                const correctAnswer = answers[question].correct;
+                const correctText = answers[question].text;
+
+                if (selectedAnswer) {
+                    const label = selectedAnswer.labels[0];
+                    if (selectedAnswer.value === correctAnswer) {
+                        score++;
+                        label.parentNode.classList.add("correct");
+                        resultHtml2 += `<p class="correct" style="padding-left: 5px;">${correctText} - Правильно!</p>`;
+                    } else {
+                        label.parentNode.classList.add("incorrect");
+                        resultHtml2 += `<p class="incorrect" style="padding-left: 5px;">${label.innerText} - Неправильно! Правильный ответ: ${correctText}</p>`;
+                    }
+                } else {
+                    resultHtml2 += `<p class="incorrect" style="padding-left: 5px;">Не выбрано - Правильный ответ: ${correctText}</p>`;
+                } 
+            }
+
+            // Выводим результат
+            document.getElementById('result2').innerHTML = `
+                <p style="margin-bottom: 0px;">Вы набрали ${score} из ${Object.keys(answers).length} правильных ответов.</p>
+                <div>${resultHtml2}</div>  
+            `;
+        });
+
+        // Получаем элементы
+        const startTestButton2 = document.querySelector('.block-test2');
+        const authModal2 = document.getElementById('authModal2');
+        const closeModalButton2 = document.getElementById('closeModal2');
+        const confirmModal = document.getElementById('confirmModal');
+        const closeConfirmModal = document.getElementById('closeConfirmModal');
+        const confirmCloseButton = document.getElementById('confirmCloseButton');
+        const cancelCloseButton = document.getElementById('cancelCloseButton');
+
+        // Обработчик клика на кнопку "Начать тест"
+        startTestButton2.addEventListener('click', function() {
+            authModal2.style.display = 'block';
+        });
+
+        // Открытие модального окна подтверждения
+        closeModalButton2.addEventListener('click', function() {
+            confirmModal.style.display = 'block';
+        });
+
+        // Подтверждение закрытия
+        confirmCloseButton.addEventListener('click', function() {
+            authModal2.style.display = 'none';
+            resetForm(); // Сбрасываем форму при закрытии модального окна
+            confirmModal.style.display = 'none';
+        });
+
+        // Отмена закрытия
+        cancelCloseButton.addEventListener('click', function() {
+            confirmModal.style.display = 'none';
+        });
+
+        // Закрытие модального окна подтверждения при нажатии на крестик
+        closeConfirmModal.addEventListener('click', function() {
+            confirmModal.style.display = 'none';
+        });
+
+        // Функция для сброса формы
+        function resetForm() {
+            document.getElementById('sysAdminTest').reset(); // Сброс формы
+            document.getElementById('result2').innerHTML = ''; // Очистка результатов
+        }
+        </script> 
     
         <style>
             .question {
@@ -338,6 +475,14 @@
             }
 
             .result {
+                margin-top: 20px;
+                padding: 15px;
+                background: #e8f5e9;
+                border-left: 5px solid #4CAF50;
+                border-radius: 5px;
+            }
+
+            .result2 {
                 margin-top: 20px;
                 padding: 15px;
                 background: #e8f5e9;
@@ -403,6 +548,13 @@
             .question.correct{
                 border: 2px solid #4CAF50;
             }
+            
+            .closeConfirmModal.aaa:hover,
+            .closeConfirmModal.aaa:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }      
         </style>    
 
     <!-- Scripts -->
