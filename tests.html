@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="image fit">
-                        <p>Этот тест включает вопросы по различным аспектам администрирования, включая операционные системы, сети, безопасность и резервное копирование. Тест состоит из 10 вопросов с несколькими вариантами ответов. Готовы к вызову? Начните тест прямо сейчас!</p>
+                        <p>Этот тест включает вопросы по различным аспектам администрирования, включая операционные системы, сети, резервное копирование. Тест состоит из 10 вопросов с несколькими вариантами ответов. Готовы к вызову? Начните тест прямо сейчас!</p>
                         <button type="button" class="block-test2">Начать тест</button>
                     </div>        
                 </article>
@@ -177,15 +177,7 @@
                         </div>
                     
                         <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">3. Какой метод является наиболее безопасным для аутентификации пользователей?</h3>
-                            <label><input type="radio" name="q4" value="a"> a) Пароль</label><br>
-                            <label><input type="radio" name="q4" value="b"> b) Двухфакторная аутентификация</label><br>
-                            <label><input type="radio" name="q4" value="c"> c) Ответ на секретный вопрос</label><br>
-                            <label><input type="radio" name="q4" value="d" style="margin-bottom: 12px;"> d) SMS-код</label>
-                        </div>
-                    
-                        <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">4. Какой файл является конфигурационным для сетевых интерфейсов в Linux?</h3>
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">3. Какой файл является конфигурационным для сетевых интерфейсов в Linux?</h3>
                             <label><input type="radio" name="q6" value="a"> a) /etc/passwd</label><br>
                             <label><input type="radio" name="q6" value="b"> b) /etc/network/interfaces</label><br>
                             <label><input type="radio" name="q6" value="c"> c) /etc/hosts</label><br>
@@ -193,7 +185,7 @@
                         </div>
                     
                         <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">5. Какой инструмент используется для управления пакетами в Debian?</h3>
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">4. Какой инструмент используется для управления пакетами в Debian?</h3>
                             <label><input type="radio" name="q7" value="a"> a) yum</label><br>
                             <label><input type="radio" name="q7" value="b"> b) apt</label><br>
                             <label><input type="radio" name="q7" value="c"> c) pacman</label><br>
@@ -201,7 +193,7 @@
                         </div>
                     
                         <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">6. Какой тип резервного копирования включает полное резервное копирование всех данных?</h3>
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">5. Какой тип резервного копирования включает полное резервное копирование всех данных?</h3>
                             <label><input type="radio" name="q8" value="a"> a) Инкрементное</label><br>
                             <label><input type="radio" name="q8" value="b"> b) Дифференциальное</label><br>
                             <label><input type="radio" name="q8" value="c"> c) Полное</label><br>
@@ -209,7 +201,7 @@
                         </div>
                     
                         <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">7. Какой тип атаки направлен на перегрузку сервера?</h3>
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">6. Какой тип атаки направлен на перегрузку сервера?</h3>
                             <label><input type="radio" name="q9" value="a"> a) Фишинг</label><br>
                             <label><input type="radio" name="q9" value="b"> b) DDoS</label><br>
                             <label><input type="radio" name="q9" value="c"> c) SQL-инъекция</label><br>
@@ -217,7 +209,7 @@
                         </div>
                     
                         <div class="question">
-                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">8. Какой метод шифрования считается наиболее безопасным?</h3>
+                            <h3 style="padding-left: 10px; padding-top: 10px; margin-bottom: 10px; font-size: 22px;">7. Какой метод шифрования считается наиболее безопасным?</h3>
                             <label><input type="radio" name="q10" value="a"> a) DES</label><br>
                             <label><input type="radio" name="q10" value="b"> b) AES</label><br>
                             <label><input type="radio" name="q10" value="c"> c) RC4</label><br>
@@ -338,12 +330,11 @@
             const answers = {
                 q1: { correct: 'b', text: 'b) FTP' },
                 q2: { correct: 'a', text: 'a) 22' },
-                q3: { correct: 'b', text: 'b) Двухфакторная аутентификация' },
-                q4: { correct: 'b', text: 'b) /etc/network/interfaces' },
-                q5: { correct: 'b', text: 'b) apt' },
-                q6: { correct: 'c', text: 'c) Полное' },
-                q7: { correct: 'b', text: 'b) DDoS' },
-                q8: { correct: 'b', text: 'b) AES' }
+                q3: { correct: 'b', text: 'b) /etc/network/interfaces' },
+                q4: { correct: 'b', text: 'b) apt' },
+                q5: { correct: 'c', text: 'c) Полное' },
+                q6: { correct: 'b', text: 'b) DDoS' },
+                q7: { correct: 'b', text: 'b) AES' }
             };
 
             // Проверяем ответы
